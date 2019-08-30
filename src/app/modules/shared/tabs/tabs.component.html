@@ -1,0 +1,6 @@
+<div class="i_tab_container">
+  <div class="i_tab_item item_{{i}}" *ngFor="let tab of TABS; let i = index"
+    [style.width]="TABS.length == 2 ? '50%' : null" [class.active]="tab.active" (click)="setActiveTab(i)">
+    {{ tab.name }}
+  </div>
+</div>

@@ -1,0 +1,39 @@
+.logo {
+    text-align: center;
+}
+
+.menu_row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+
+    .menu_coloum {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 100%;
+        flex: 1;
+
+        div {
+            border: 1px solid #1e7d15;
+            border-radius: 19px;
+            background-color: #ffffff;
+            margin: 15px;
+            height: 160px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            img {
+                max-width: 85px;
+                max-height: 76px;
+            }
+
+            span {
+                color: #62a4e4;
+                font-size: 13px;
+            }
+        }
+    }
+}

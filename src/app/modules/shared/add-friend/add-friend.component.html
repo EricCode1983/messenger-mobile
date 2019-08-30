@@ -1,0 +1,12 @@
+<div class="m_add_friend_container">
+  <div class="m_add_friend_list" *ngFor="let user of USERS?._embedded.user; let i = index">
+    <div class="m_add_friend_item item">
+      {{ user.displayName }}
+      <button class="add_friend_btn" *ngIf="!user.isFriendRequestSend && !user.isFriendRequestForApproval" (click)="addFriend(user, i)">Add
+        Friend</button>
+      <button class="add_friend_btn" *ngIf="user.isFriendRequestForApproval" (click)="confirmFriend(user, i)">Accept
+        Friend</button>
+      <span class="request" *ngIf="user.isFriendRequestSend">REQUEST SENT</span>
+    </div>
+  </div>
+</div>

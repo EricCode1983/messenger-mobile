@@ -1,0 +1,34 @@
+<app-navbar [NAV]="title" [LOGOUT]="false" [BACK]="false"></app-navbar>
+<ion-content>
+  <div class="sign">
+    <div class="appForm" ion-fixed padding margin-bottom>
+
+      <ion-list class="form-content" style="margin-top: 31% !important">
+        <ion-item class="input" style="position: relative !important;">
+          <ion-icon class="label-icon" name="mail" item-left></ion-icon>
+          <ion-input class="input-field" [(ngModel)]="user.username" name="username" type="text" placeholder="Email">
+          </ion-input>
+        </ion-item>
+        <ion-item class="input">
+          <ion-icon class="label-icon" name="md-key" item-left></ion-icon>
+          <ion-input class="input-field" [(ngModel)]="user.password" name="password" type="password"
+            placeholder="Password">
+          </ion-input>
+        </ion-item>
+        <ion-item class="input">
+          <div class="chatType" *ngFor="let chat of env; let i = index" [class.active]="chat == chatType"
+            (click)="saveChat('chat', chat)">
+            {{chat}}
+          </div>
+        </ion-item>
+        <div class="signup-button">
+          <ion-button expand="full" (click)="login()" color="primary">Login</ion-button>
+        </div>
+        <div class="signup-button">
+          <ion-button expand="full" routerLink="/register" color="primary">Sign Up</ion-button>
+        </div>
+      </ion-list>
+
+    </div>
+  </div>
+</ion-content>

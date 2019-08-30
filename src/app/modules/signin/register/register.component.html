@@ -1,0 +1,72 @@
+<app-navbar [NAV]="title" [LOGOUT]="false" [BACK]="true"></app-navbar>
+<ion-content>
+  <div class="sign">
+    <div class="appForm" ion-fixed padding margin-bottom>
+      <!--has the back button-->
+      <!-- <ion-buttons left class="backBtn">
+        <button ion-button icon-only routerLink="/signin">
+          <ion-icon name="arrow-back"></ion-icon>
+        </button>
+      </ion-buttons> -->
+      <!-- <ion-header no-border>
+        <ion-navbar>
+          <ion-title>Register</ion-title>
+        </ion-navbar>
+      </ion-header> -->
+
+      <form [formGroup]="signupform" novalidate>
+        <ion-list class="form-content" style="margin-top: 31% !important">
+          <ion-item class="input">
+            <ion-icon class="label-icon" name="contact" item-left></ion-icon>
+            <ion-input class="input-field" maxlength="10" formControlName="displayName" type="displayName"
+              [(ngModel)]="user.displayName" name="displayName" placeholder="Display Name">
+            </ion-input>
+          </ion-item>
+          <ion-item class="input" style="position: relative !important;">
+            <ion-icon class="label-icon" ios="ios-person" md="md-person" item-left></ion-icon>
+            <ion-input class="input-field" formControlName="username" [(ngModel)]="user.username" name="username"
+              type="text" placeholder="Username">
+            </ion-input>
+          </ion-item>
+          <ion-item class="input">
+            <ion-icon class="label-icon" name="md-key" item-left></ion-icon>
+            <ion-input class="input-field" (keyup.enter)="onBlurMethod()" formControlName="password"
+              [(ngModel)]="user.password" name="password" type="password" placeholder="Password">
+            </ion-input>
+          </ion-item>
+          <ion-item class="input">
+            <ion-icon class="label-icon" name="male" item-left></ion-icon>
+            <ion-radio-group class="signup-radio">
+              <ion-item>
+                <ion-label>Male</ion-label>
+                <ion-radio [checked]="true" (ionSelect)="radioChecked('male')" [value]="male"></ion-radio>
+              </ion-item>
+
+              <ion-item>
+                <ion-label>Female</ion-label>
+                <ion-radio (ionSelect)="radioChecked('female')" [value]="female"></ion-radio>
+              </ion-item>
+            </ion-radio-group>
+          </ion-item>
+          <ion-item class="input">
+            <ion-icon class="label-icon" name="mail" item-left></ion-icon>
+            <ion-input class="input-field" formControlName="email" [(ngModel)]="user.email" name="email" type="email"
+              placeholder="Email">
+            </ion-input>
+          </ion-item>
+          <ion-item class="input">
+            <ion-icon class="label-icon" name="call" item-left></ion-icon>
+            <ion-input class="input-field" maxlength="10" formControlName="phone" type="number" [(ngModel)]="user.phone"
+              name="phone" placeholder="Phone No">
+            </ion-input>
+          </ion-item>
+
+          <div class="signup-button">
+            <ion-button expand="full" [disabled]="signupform.invalid" (click)="registerUser()" color="primary">Sign
+              Up</ion-button>
+          </div>
+        </ion-list>
+      </form>
+    </div>
+  </div>
+</ion-content>

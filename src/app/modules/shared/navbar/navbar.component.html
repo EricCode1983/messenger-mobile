@@ -1,0 +1,15 @@
+<div class="b_nav_container">
+  <div class="back" *ngIf="back">
+    <ion-buttons left (click)="goBack()" class="backBtn">
+      <ion-icon (click)="goBack()" name="arrow-back"></ion-icon>
+    </ion-buttons>
+  </div>
+  <div class="title">
+    {{title}}
+  </div>
+  <div class="back" *ngIf="logout">
+    <ion-buttons left (click)="logOut()" class="backBtn">
+      <ion-icon (click)="logOut()" name="log-out"></ion-icon>
+    </ion-buttons>
+  </div>
+</div>

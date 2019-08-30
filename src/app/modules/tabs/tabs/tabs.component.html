@@ -1,0 +1,30 @@
+<ion-tabs>
+  <ion-tab-bar>
+    <div class="b_tab_container">
+      <div class="b_tab" routerLink="/tab/home" (click)="setActiveTab('home')">
+        <div class="b_tab_icon" routerLink="/tab/home" routerLinkActive="active"></div>
+        <div class="b_tab_content" routerLink="/tab/home" routerLinkActive="active">HOME</div>
+      </div>
+      <div class="b_tab" routerLink="/tab/chat" (click)="setActiveTab('chat')">
+        <div class="b_tab_icon trade" routerLink="/tab/chat" routerLinkActive="active"></div>
+        <div class="b_tab_content" routerLink="/tab/chat" routerLinkActive="active">CHAT</div>
+      </div>
+      <div class="b_tab" routerLink="/tab/funds" (click)="setActiveTab('funds')">
+        <div class="b_tab_icon funds" routerLink="/tab/funds" routerLinkActive="active"></div>
+        <div class="b_tab_content" routerLink="/tab/funds" routerLinkActive="active">SETTING</div>
+      </div>
+      <div class="b_tab" routerLink="/tab/report" (click)="setActiveTab('report')">
+        <div class="b_tab_icon account" routerLink="/tab/report" routerLinkActive="active"></div>
+        <div class="b_tab_content" routerLink="/tab/report" routerLinkActive="active">FISHING</div>
+      </div>
+      <div class="b_tab" routerLink="/tab/report" (click)="setActiveTab('report')">
+        <div class="b_tab_icon account" routerLink="/tab/report" routerLinkActive="active"></div>
+        <div class="b_tab_content" routerLink="/tab/report" routerLinkActive="active">LOCATION</div>
+      </div>
+      <div class="b_tab" routerLink="/tab/account" (click)="setActiveTab('account')">
+        <div class="b_tab_icon account" routerLink="/tab/account" routerLinkActive="active"></div>
+        <div class="b_tab_content" routerLink="/tab/account" routerLinkActive="active">SOS</div>
+      </div>
+    </div>
+  </ion-tab-bar>
+</ion-tabs>

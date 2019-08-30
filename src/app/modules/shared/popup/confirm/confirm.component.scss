@@ -1,0 +1,162 @@
+.i_choose_popup_container {
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    font-family: var(--i-secondry-font);
+
+    .i_choose_popup_body {
+        display: block;
+        background-color: #265381;
+        border: 0.25rem solid #274667;
+        border-top: 0;
+        width: 18rem;
+        height: auto;
+        border-radius: 0.5rem;
+        padding: calc(var(--i-default-padding) / 1.5);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .i_popup_container {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 6rem;
+            background-color: var(--i-white-color);
+
+            .i_master_content {
+                position: absolute;
+                top: -1.75rem;
+                left: auto;
+                padding: 0.5rem 0.25rem;
+                max-width: 12rem;
+                width: 100%;
+                background: var(--i-white-color);
+                border-radius: 2rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: var(--i-md-font-size);
+                color: var(--i-secondry-color);
+                font-weight: 600;
+                box-shadow: 0.1rem 0 0.85rem -0.15rem var(--i-medium-gray-color), 0rem 0.15rem 0.5rem -0.15rem var(--i-medium-gray-color);
+                text-transform: capitalize;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                z-index: -3;
+                width: 100%;
+                height: 8rem;
+                top: -7rem;
+                left: auto;
+                background: url('/assets/imgs/achievements/cloud.svg') center center no-repeat;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 8rem;
+                top: -9.65rem;
+                left: auto;
+                background: url(/assets/imgs/common/mascot-exit_logout.svg) center center no-repeat;
+            }
+
+            .i_status {
+                text-align: center;
+                padding: var(--i-default-padding) 0 0 0;
+                font-weight: 600;
+                color: var(--i-secondry-color);
+                text-transform: capitalize;
+            }
+
+            .i_choose_card_text {
+                width: 100%;
+                height: auto;
+                color: var(--i-secondry-color);
+                padding-bottom: calc(var(--i-default-padding)/2);
+                text-align: center;
+                font-size: var(--i-sm-font-size);
+                text-transform: capitalize;
+                font-family: var(--i-primary-font);
+            }
+
+            .i_details_container {
+                position: relative;
+                display: flex;
+
+                .i_gold_coin {
+                    background-size: contain;
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    background-image: url('/assets/imgs/ilab/misc/gold-coin.svg');
+                    width: 2.25rem;
+                    height: 1.75rem;
+                }
+
+                .i_amount {
+                    font-size: var(--i-lg-font-size);
+                    color: var(--i-secondry-color);
+                    font-family: var(--i-primary-font);
+                    font-weight: 600;
+                }
+            }
+
+            .i_choose_card_avatar {
+                min-height: 6rem;
+                min-width: 8rem;
+                background-size: contain;
+                background-position: center center;
+                background-repeat: no-repeat;
+                margin: calc(var(--i-default-margin)/2) 0;
+
+                &.item_bronze {
+                    background-image: url('/assets/imgs/achievements/certificate-bronze.svg')
+                }
+
+                &.item_silver {
+                    background-image: url('/assets/imgs/achievements/certificate-silver.svg')
+                }
+
+                &.item_gold {
+                    background-image: url('/assets/imgs/achievements/certificate-gold.svg')
+                }
+            }
+        }
+
+
+        .i_button_container {
+            position: relative;
+            display: flex;
+            flex-direction: row;
+
+            .i_yes_button,
+            .i_no_button {
+                color: #fff;
+                width: fit-content;
+                padding: calc(var(--i-default-padding) / 2.5) calc(var(--i-default-padding) / 1.5);
+                border-radius: 10rem;
+                margin-top: calc(var(--i-default-padding) / 2);
+                font-size: 1.5rem;
+            }
+
+            .i_yes_button {
+                background-color: var(--i-primary-color);
+            }
+
+            .i_no_button {
+                background-color: var(--i-danger-color);
+                margin-right: 1rem;
+            }
+        }
+    }
+}

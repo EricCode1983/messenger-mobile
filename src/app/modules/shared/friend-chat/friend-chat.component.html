@@ -1,0 +1,8 @@
+<div class="m_add_friend_container">
+  <div class="m_add_friend_list" *ngFor="let user of USERS; let i = index">
+    <div class="m_add_friend_item item"
+      [routerLink]="['/convo', data.user.username, user.friendUserCode, 'CHAT_MSG', 0, user.displayName ? user.displayName : user.friendDisplayName]">
+      {{ user.displayName ? user.displayName : user.friendDisplayName }}
+    </div>
+  </div>
+</div>

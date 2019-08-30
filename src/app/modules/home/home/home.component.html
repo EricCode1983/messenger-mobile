@@ -1,0 +1,24 @@
+<app-navbar [NAV]="title" [LOGOUT]="true" [BACK]="false"></app-navbar>
+<ion-content>
+  <div class="menu_row">
+    <div class="menu_coloum">
+      <div (click)="clickTab('ChatListPage')"><img src="../../assets/imgs/message-logo.png" alt=""
+          title=""><span>Messenger</span></div>
+      <div (click)="clickTab('StreamsPage','top')"><img src="../../assets/imgs/fishing-report.png" alt=""
+          title=""><span>Fishing Report</span>
+      </div>
+      <div (click)="clickTab('SettingsPage')"><img src="../../assets/imgs/setting.png" alt=""
+          title=""><span>Setting</span></div>
+    </div>
+    <div class="menu_coloum">
+      <div (click)="clickTab('ChatListPage')"><img src="../../assets/imgs/email-logo.png" alt=""
+          title=""><span>Email</span></div>
+      <div (click)="clickTab('StreamsPage','post')"><img src="../../assets/imgs/location-report.png" alt=""
+          title=""><span>Location
+          Report</span></div>
+      <div (click)="clickTab('ChatListPage')"><img src="../../assets/imgs/sos.png" alt="" title=""><span>SOS</span>
+      </div>
+    </div>
+  </div>
+
+</ion-content>

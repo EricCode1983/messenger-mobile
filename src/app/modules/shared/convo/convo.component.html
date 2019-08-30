@@ -1,0 +1,31 @@
+<app-navbar [NAV]="title" [LOGOUT]="false" [BACK]="true" (ionScrollEnd)="logScrollEnd()"></app-navbar>
+<ion-content style="margin-top:10px; margin-bottom: 10px">
+    <div class="message-wrspper" *ngFor="let message of msgBank">
+    <div class="left" *ngIf="userDetails.username === message.msgTO">
+      <div class="chat-bubble left slide-left">
+        <div class="message">{{message.msgContent}}</div>
+      </div>
+    </div>
+
+    <div class="right" *ngIf="userDetails.username === message.msgFrom">
+      <div class="chat-bubble right slide-right">
+        <div class="message">{{message.msgContent}}</div>
+      </div>
+    </div>
+
+    <div class="cf"></div>
+  </div>
+</ion-content>
+
+<ion-footer no-border>
+  <form #userForm="ngForm" class="send_form" novalidate>
+    <!-- <ion-item class="inputItem" style="margin-top: 0px !important"> -->
+      <input id="msgInput" name="message" [(ngModel)]="message" placeholder="Send Message..." required />
+      <!-- </input> -->
+      <button class="msgBtn" ion-button clear item-end (click)="sendMessage(message)">
+        <ion-icon class="footer-btn" name="send"></ion-icon>
+      </button>
+    <!-- </ion-item> -->
+  </form>
+
+</ion-footer>

@@ -1,0 +1,20 @@
+.b_nav_container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, #ffd866, #4aa1f3);
+    height: 3rem;
+    color: #3a648d;
+    box-shadow: 0px 2px #e0e5e5;
+    padding: 0 1rem;
+
+    .back {
+        flex: .1;
+    }
+
+    .title {
+        flex: .9;
+        text-align: center;
+    }
+}

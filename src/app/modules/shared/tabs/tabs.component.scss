@@ -1,0 +1,26 @@
+.i_tab_container {
+    position: relative;
+    display: inline-flex;
+    overflow: auto;
+    height: auto;
+    width: 100%;
+    background: var(--i-secondry-color);
+
+    .i_tab_item {
+        position: relative;
+        height: auto;
+        font-size: var(--i-sm-font-size);
+        color: var(--i-white-color);
+        text-align: center;
+        padding: calc(var(--i-default-padding) / 2) var(--i-default-padding);
+        opacity: 0.6;
+        text-transform: uppercase;
+        white-space: nowrap;
+        transition: opacity 500ms cubic-bezier(0.23, 1, 0.320, 1);
+
+        &.active {
+            opacity: 1;
+            border-bottom: 0.25rem solid var(--i-primary-color);
+        }
+    }
+}
